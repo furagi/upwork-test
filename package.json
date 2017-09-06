@@ -1,6 +1,6 @@
 {
   "name": "upwork-test",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
     "concurrently": "^3.5.0",
