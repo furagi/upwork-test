@@ -7,5 +7,5 @@ npm install && cd client && npm install && cd ../
 
 ## To run the app, run
 ```bash
-NODE_ENV=production npm run start:production
+PORT=80 npm run start
 ```
