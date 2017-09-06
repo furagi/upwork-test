@@ -50,4 +50,4 @@ app.get('/', function(req, res) {
   res.sendFile(path.resolve('client/build/index.html'));
 });
 app.use('/static', express.static(path.resolve('client/build/static')));
-http.createServer(app).listen(4000);
+http.createServer(app).listen(process.env.PORT);
