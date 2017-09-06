@@ -1,6 +1,6 @@
 {
   "name": "upwork-test",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "dependencies": {
     "concurrently": "^3.5.0",
@@ -10,6 +10,7 @@
   "scripts": {
     "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
     "start:server": "node server",
-    "start:client": "node client/starter.js"
+    "start:client": "node client/starter.js",
+    "start:production": "node server"
   }
 }

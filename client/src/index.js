@@ -8,7 +8,7 @@ import { configureStore } from './redux/store';
 import registerServiceWorker from './registerServiceWorker';
 
 const ssl = window.location.origin.indexOf('https') === 0;
-axios.defaults.baseURL = `http${ ssl ? 's' : '' }://localhost:3200`;
+axios.defaults.baseURL = `http${ ssl ? 's' : '' }://localhost:4000`;
 const store = configureStore();
 
 ReactDOM.render(<App store={store} />, document.getElementById('root'));
