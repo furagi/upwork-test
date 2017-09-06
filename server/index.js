@@ -3,11 +3,12 @@
 const http = require('http');
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 
 const app = express();
 app.use(cors());
 
-app.get('*', function(req, res) {
+app.use('/api*', function(req, res) {
   res.json({
     "page": 1,
     "perPage": 2,
@@ -44,4 +45,9 @@ app.get('*', function(req, res) {
     }
   });
 });
-http.createServer(app).listen(3200);
+
+app.get('/', function(req, res) {
+  res.sendFile(path.resolve('client/build/index.html'));
+});
+app.use('/static', express.static(path.resolve('client/build/static')));
+http.createServer(app).listen(4000);
